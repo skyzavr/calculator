@@ -1,0 +1,9 @@
+:root {
+  --big--2: 2.5rem; /* 40px */
+  --big--1: 2.25rem; /* 36px */
+  --med--3: 1.5rem; /* 24px */
+  --med--2: 1.25rem; /* 20px */
+  --med--1: 1.125rem; /* 18px */
+  --small--2: 1rem; /* 16px */
+  --small--1: 0.875rem; /* 14px */
+}

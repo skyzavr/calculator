@@ -14,7 +14,5 @@ export type Props = {
   onUpdateValue: (isValidate: boolean, type?: string, data?: number) => void;
 };
 export interface IError {
-  [key: string]: {
-    [key: string]: string;
-  };
+  [key: string]: string;
 }

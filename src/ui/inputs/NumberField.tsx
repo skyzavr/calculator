@@ -1,23 +1,15 @@
 import classes from './numberField.module.css';
 import { Props, IError, eChange, Ekey, PrintF, nestProps } from './Type';
-import { useState, FC, useContext, useEffect } from 'react';
-import { LangContextType, LangContext } from '@context/LangContext';
+import { useState, FC } from 'react';
 const NumberField: FC<Props> = (props) => {
   const { val, title, onUpdateValue } = props;
   const { init, min, max, type }: nestProps = val;
-  const { lang } = useContext(LangContext) as LangContextType;
   const [value, setValue] = useState<string | number>(init ? init : '');
   const [isError, setIsError] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   const errorMsg: IError = {
-    en: {
-      empty: 'The value must be not empty',
-      borders: `The value must be grater than ${min} and less than ${max}`,
-    },
-    ru: {
-      empty: 'Число должо быть не пустым',
-      borders: `Число должно быть больше, чем ${min} и меньше, чем ${max}`,
-    },
+    empty: 'The value must be not empty',
+    borders: `The value must be grater than ${min} and less than ${max}`,
   };
   const onKeyUp = (e: Ekey) => {
     if (e.key === 'Enter') errorHandling();
@@ -39,10 +31,10 @@ const NumberField: FC<Props> = (props) => {
   const errorHandling = () => {
     if (value === null) return;
     if (value.toString().length === 0) {
-      return setErrorHandler(errorMsg[lang]['empty']);
+      return setErrorHandler(errorMsg['empty']);
     }
     if (Number(value) < min || Number(value) > max) {
-      return setErrorHandler(errorMsg[lang]['borders']);
+      return setErrorHandler(errorMsg['borders']);
     }
     onUpdateValue(true, type, Number(value));
   };
@@ -51,11 +43,6 @@ const NumberField: FC<Props> = (props) => {
     const endOfSent = sentEnd || '';
     return value === '' ? sentStart : `${sentStart} ${value} ${endOfSent}`;
   };
-  useEffect(() => {
-    if (isError) {
-      errorHandling();
-    }
-  }, [lang]);
   return (
     <div className={classes.container}>
       <label className={classes.label}>

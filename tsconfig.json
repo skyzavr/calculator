@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
+      "@pages/*": ["src/components/pages/*"],
       "@assets/*": ["src/assets/*"],
       "@icons/*": ["src/icons/*"],
       "@context/*": ["src/components/context/*"],

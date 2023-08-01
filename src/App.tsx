@@ -3,9 +3,9 @@ import classes from './app.module.css';
 import { useState } from 'react';
 import { useWidth } from '@/hooks/useWidth';
 import ThemeContextProvider from '@context/ThemeContext';
-import LangContextProvider from '@context/LangContext';
-import SideMenu from '@components/SideMenu/SideMenu';
-import MenuBtn from '@components/SideMenu/MenuBtn/MenuBtn';
+import SideMenu from '@pages/SideMenu/SideMenu';
+import MenuBtn from '@pages/SideMenu/MenuBtn/MenuBtn';
+import MainLayout from './components/pages/mainLayout/MainLayout';
 
 const App = () => {
   const { width } = useWidth();
@@ -18,20 +18,19 @@ const App = () => {
     setIsMenuOpen(data);
   };
   return (
-    <LangContextProvider init={dataMode('lang', 'en')}>
-      <ThemeContextProvider init={dataMode('theme', 'dark')}>
-        <main>
-          <MenuBtn
-            width={width}
-            isMenuOpen={isMenuOpen}
-            isShowHandler={onShowMenuHandler}
-          />
-          <div className={classes.wrapper}>
-            <SideMenu isMenuOpen={isMenuOpen} />
-          </div>
-        </main>
-      </ThemeContextProvider>
-    </LangContextProvider>
+    <ThemeContextProvider init={dataMode('theme', 'dark')}>
+      <main>
+        <MenuBtn
+          width={width}
+          isMenuOpen={isMenuOpen}
+          isShowHandler={onShowMenuHandler}
+        />
+        <section className={classes.wrapper}>
+          <SideMenu isMenuOpen={isMenuOpen} />
+          <MainLayout />
+        </section>
+      </main>
+    </ThemeContextProvider>
   );
 };
 

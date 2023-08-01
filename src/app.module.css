@@ -1,4 +1,23 @@
 .wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  background-color: var(--bgr);
+}
+
+@media (min-width: 280px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 385px 1fr;
+  }
+}
+body {
+  background-color: var(--bgr);
+}
+main {
+  position: relative;
 }

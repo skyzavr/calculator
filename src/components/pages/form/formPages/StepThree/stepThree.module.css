@@ -1,0 +1,56 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  max-width: 600px;
+}
+.listItem > span {
+  height: 40px;
+  width: 1px;
+  border-radius: 20px;
+  background-color: var(--text--primary);
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.listItem:hover {
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.listItem:not(.listItem:last-child) {
+  margin-bottom: 20px;
+}
+.current {
+  background-color: var(--text--primary);
+  border: 2px solid var(--text--primary);
+}
+
+.default {
+  background-color: var(--elem);
+  border: 2px solid var(--elem);
+}
+.current > li {
+  color: var(--text--second);
+}
+.default > li {
+  color: var(--text--primary);
+}
+.listItem > li:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.listItem > li:last-child {
+  font-size: 14px;
+}

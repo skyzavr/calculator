@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 20px;
+}
+.title {
+  color: var(--text--primary);
+  font-size: var(--big--1);
+}
+.wrapper > button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tabs > p {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.tabs > p:not(.current) {
+  color: var(--shadow);
+}
+.tabs > p:first-child {
+  margin-right: 20px;
+}
+.current {
+  font-weight: bold;
+  color: var(--text--primary);
+  text-decoration: underline;
+}
+.tabs > p:hover {
+  color: var(--blue);
+  transition: 0.3s ease-in-out;
+}
+.container {
+  transition: 0.3s ease-in-out;
+}

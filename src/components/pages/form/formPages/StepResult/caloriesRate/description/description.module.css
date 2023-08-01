@@ -1,0 +1,28 @@
+.wrapper {
+  margin-top: 40px;
+  max-width: 644px;
+  color: var(--text--primary);
+}
+.wrapper > div {
+  margin-bottom: 40px;
+}
+.wrapper > div:last-child {
+  margin-bottom: 0;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+}
+.itemTitle > div:last-child {
+  margin-left: 20px;
+}
+.itemTitle {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  font-size: var(--med--2);
+  margin-bottom: 20px;
+}
+.itemDesc {
+  font-size: var(--small--2);
+}

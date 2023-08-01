@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.container button {
+  margin-top: 60px;
+}
+@media (min-width: 280px) {
+  .container svg {
+    width: 260px;
+    height: auto;
+  }
+}
+@media (min-width: 320px) {
+  .container svg {
+    width: 300px;
+    height: auto;
+  }
+}
+@media (min-width: 430px) {
+  .container svg {
+    width: 350px;
+    height: auto;
+  }
+}
+@media (min-width: 744px) {
+  .container svg {
+    width: 380px;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .container svg {
+    width: 470px;
+    height: auto;
+  }
+}

@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, FunctionComponent } from 'react';
+import { createContext, useState, ReactNode, FC } from 'react';
 export type ThemeContextType = {
   theme: string;
   setTheme: (theme: string) => void;
@@ -8,13 +8,10 @@ type Params = {
   children: ReactNode;
   init: string;
 };
-
-const ThemeContextProvider: FunctionComponent<Params> = ({
-  children,
-  init,
-}) => {
+const ThemeContextProvider: FC<Params> = ({ children, init }) => {
   const [theme, setTheme] = useState<string>(init);
-
+  document.documentElement.setAttribute('color-scheme', theme);
+  localStorage.setItem('theme', theme);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}

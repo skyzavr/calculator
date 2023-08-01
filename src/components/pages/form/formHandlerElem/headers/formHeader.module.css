@@ -1,0 +1,24 @@
+.title {
+  margin-top: 40px;
+  color: var(--text--primary);
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 280px) {
+  .title {
+    font-size: var(--med--3);
+  }
+}
+
+@media (min-width: 430px) {
+  .title {
+    font-size: var(--med--4);
+  }
+}
+
+@media (min-width: 744px) {
+  .title {
+    font-size: var(--big--1);
+  }
+}

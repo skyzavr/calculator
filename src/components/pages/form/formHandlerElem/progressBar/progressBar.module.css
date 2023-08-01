@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+.wrapper > div {
+  height: 10px;
+
+  border-radius: 20px;
+}
+.wrapper > div:nth-child(2n) {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.default {
+  background-color: var(--elem--second);
+}
+.stadia {
+  background-color: var(--acent);
+}
+@media (min-width: 280px) {
+  .wrapper > div {
+    width: 80px;
+  }
+}
+@media (min-width: 430px) {
+  .wrapper > div {
+    width: 100px;
+  }
+}
+@media (min-width: 744px) {
+  .wrapper > div {
+    width: 120px;
+  }
+}

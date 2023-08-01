@@ -1,0 +1,22 @@
+.hint {
+  font-size: var(--small--2);
+  color: var(--blue--light);
+  text-decoration: underline;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  margin-top: 160px;
+  margin-bottom: 30px;
+}
+.home {
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.hint:hover,
+.home:hover {
+  color: var(--blue);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}

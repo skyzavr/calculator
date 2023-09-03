@@ -7,7 +7,7 @@
 # Links
 
 <a href="https://github.com/skyzavr/calculator">[Repo]</a> |
-<a href="https://calories-rate-calculator-skyzavr.vercel.app">[Live]</a> |
+<a href="https://calories-rate-calculator-53w1ya2ax-skyzavr.vercel.app">[Live]</a> |
 <a href="https://www.figma.com/file/N8LPQLDD8dF8tCp1I2B3Dg/Calories-rate-calculator?type=design&node-id=0%3A1&mode=design&t=gMPKh9WDCCIUpML3-1">[Figma]</a>
 
 # About

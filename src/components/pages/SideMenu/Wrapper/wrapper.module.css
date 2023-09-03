@@ -1,27 +1,13 @@
 .container {
   margin: 0 auto;
-  padding-top: 100px;
+  overflow: auto;
+  height: 100vh;
 }
 .wrapper {
   height: 100vh;
   background-color: var(--bgr--blue);
-  width: 100vw;
-  position: absolute;
+  width: 100%;
+  position: fixed;
   transition: left 0.4s ease-in-out 0s;
-  grid-area: 1 / 1 / 2 / 2;
-}
-@media (min-width: 280px) {
-  .container {
-    max-width: 280px;
-  }
-}
-@media (min-width: 430px) {
-  .container {
-    max-width: 315px;
-  }
-}
-@media (min-width: 1024px) {
-  .wrapper {
-    width: 384px;
-  }
+  overflow: hidden;
 }

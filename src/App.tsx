@@ -1,14 +1,11 @@
 import './App.css';
-import classes from './app.module.css';
 import { useState } from 'react';
-import { useWidth } from '@/hooks/useWidth';
 import ThemeContextProvider from '@context/ThemeContext';
 import SideMenu from '@pages/SideMenu/SideMenu';
 import MenuBtn from '@pages/SideMenu/MenuBtn/MenuBtn';
 import MainLayout from './components/pages/mainLayout/MainLayout';
 
 const App = () => {
-  const { width } = useWidth();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const dataMode = (paramName: string, preferedParam: string): string => {
     const isParamExist = localStorage.getItem(paramName);
@@ -19,16 +16,10 @@ const App = () => {
   };
   return (
     <ThemeContextProvider init={dataMode('theme', 'dark')}>
+      <SideMenu isMenuOpen={isMenuOpen} />
       <main>
-        <MenuBtn
-          width={width}
-          isMenuOpen={isMenuOpen}
-          isShowHandler={onShowMenuHandler}
-        />
-        <section className={classes.wrapper}>
-          <SideMenu isMenuOpen={isMenuOpen} />
-          <MainLayout />
-        </section>
+        <MenuBtn isMenuOpen={isMenuOpen} isShowHandler={onShowMenuHandler} />
+        <MainLayout />
       </main>
     </ThemeContextProvider>
   );

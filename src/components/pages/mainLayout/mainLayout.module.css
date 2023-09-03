@@ -3,16 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bgr);
+}
+body {
+  background-color: var(--bgr);
 }
 @media (min-width: 280px) {
   .wrapper {
-    grid-area: 1 / 1;
     margin-top: 0;
-  }
-}
-@media (min-width: 1024px) {
-  .wrapper {
-    grid-area: 1 / 2 / 2 / 3;
-    margin-top: 40px;
   }
 }

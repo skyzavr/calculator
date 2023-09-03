@@ -49,14 +49,12 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  /* font-size: inherit; */
   font-weight: 400;
 }
 
@@ -91,4 +89,21 @@ ul li {
 
 img {
   vertical-align: top;
+}
+
+/* scroll */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #5f5959;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #222020;
+  border-radius: 35px;
+  border: 0px none;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #252c46;
 }

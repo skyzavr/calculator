@@ -12,10 +12,8 @@ const SideMenu: FC<Params> = ({ isMenuOpen }) => {
     width >= BIG_MENU ? 0 : -1
   );
   useEffect(() => {
-    const isBig = width >= BIG_MENU;
-    const isSmallOpen = isMenuOpen && width < BIG_MENU;
-    setLeftPosition(isBig || isSmallOpen ? 0 : -1);
-  }, [isMenuOpen, width]);
+    setLeftPosition(isMenuOpen ? 0 : -1);
+  }, [isMenuOpen]);
 
   return (
     <>

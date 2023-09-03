@@ -1,5 +1,9 @@
-export interface FormDatas {
-  gender: 0 | 1 | -1;
+type genderParams = 0 | 1 | -1;
+interface IObjectKeys {
+  [key: string]: number | null | genderParams;
+}
+export interface FormDatas extends IObjectKeys {
+  gender: genderParams;
   age: number | null;
   height: number | null;
   weight: number | null;
